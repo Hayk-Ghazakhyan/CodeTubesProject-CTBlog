@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CTBLOG Homepage</title>
+
+    <style>
+        .nav-el {
+            list-style: none;
+            color: brown;
+          }
+        .nav-el > li {
+            float: left;
+            margin-right: 10px;
+            }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class='nav-el'>
+                <li><a href="{%url 'blog:home'%}">Home Page</a></li>
+                <li><a href="{%url 'blog:contact-us'%}">Contact US</a></li>
+                <li><a href="">About US</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    {%block content%}
+
+    
+    {%endblock%}
+</body>
+</html>

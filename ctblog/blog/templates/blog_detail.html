@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+<h1>{{blog.title}}</h1>
+<p>{{blog.description}}</p>
+
+<form action="" method="POST">
+    {%csrf_token%}
+    <label for="">Name</label>
+    <input type="text" name="name">
+    <br>
+
+    <label for="">Message</label>
+    <textarea name="message" id="" cols="30" rows="10"></textarea>
+    <br>
+
+    <button>Submit</button>
+
+
+</form>
+
+{%endblock%}
+
