@@ -1,4 +1,5 @@
 from django.db import models
+import pytz
 
 # Create your models here.
 
@@ -17,7 +18,7 @@ class Contact(models.Model):
     timestamp = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.first_name + "-" + self.last_name
+        return self.first_name + "-" + self.last_name + " - " + self.timestamp.strftime('%Y-%m-%d %H:%M:%S')
 
 
 class Comment(models.Model):
